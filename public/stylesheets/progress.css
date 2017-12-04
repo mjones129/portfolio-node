@@ -1,0 +1,84 @@
+/*RADIAL PROGRESS BARS BEGIN*/
+.container-fluid {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+/*.html-progress .css-progress .js-progress .node-progress .express-progress .mongo-progress{*/
+/*    max-width: 150px;*/
+/*    height: 100%;*/
+/*    background-color: transparent;*/
+/*    margin: 20px auto;*/
+/*    margin-top: 50px;*/
+/*    text-align: center;*/
+/*    font-size: 35px;*/
+/*}*/
+
+.html-progress > svg {
+    display: block;
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+.css-progress > svg {
+    display: block;
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+.js-progress > svg {
+    display: block;
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+.node-progress > svg {
+    display: block;
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+.express-progress > svg {
+    display: block;
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+.mongo-progress > svg {
+    display: block;
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+
+.blender-progress > svg {
+    display: block;
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+.ae-progress > svg {
+    display: block;
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+.premiere-progress > svg {
+    display: block;
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+.beat-progress > svg {
+    display: block;
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+.align-self-center {
+    max-width: 250px;
+    margin: 0 auto;
+}
+/*RADIAL PROGRESS BARS END*/
