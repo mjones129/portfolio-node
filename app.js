@@ -27,14 +27,14 @@ app.get("/", function(req, res){
 
 app.post("/send", function(req, res){
 
-  const output = `
+  var output = `
     <p>You have a new message from your contact form!</p>
     <h3>Contact Deatils:</h3>
     <ul>
-      <li>Name: req.body.name</li>
-      <li>Email: req.body.email</li>
-      <li>Phone: req.body.phone</li>
-      <li>Message: req.body.message</li>
+      <li>Name: ${req.body.name}</li>
+      <li>Email: ${req.body.email}</li>
+      <li>Phone: ${req.body.phone}</li>
+      <li>Message: ${req.body.message}</li>
     </ul>
   `;
   // create reusable transporter object using the default SMTP transport
