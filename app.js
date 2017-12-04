@@ -4,6 +4,8 @@ const http = require('http');
 const https = require('https');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+// const methodOverride = require('method-override');
+const flash = require('connect-flash');
 var ejs = require('ejs');
 var port =  process.env.PORT || 5000;
 
@@ -16,6 +18,8 @@ app.use(express.static(__dirname + "/public"));
 // Body Parser setup
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+// app.use(methodOverride("_method"));
+app.use(flash());
 
 app.get("/", function(req, res){
   res.render('index.ejs');
@@ -63,8 +67,13 @@ app.post("/send", function(req, res){
         console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
     });
-    res.redirect('/');
-    var msg = "Email was successfully sent!";
+
+    res.flash("success", "Email was successfully sent!");
+    res.redirect('/', {
+      msg: req.flash("Email was successfully sent!")
+    });
+
+
 });
 
 
