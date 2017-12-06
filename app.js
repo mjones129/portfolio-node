@@ -4,13 +4,24 @@ const http = require('http');
 const https = require('https');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+const session = require('express-session');
+
 // const methodOverride = require('method-override');
 const flash = require('connect-flash');
 var ejs = require('ejs');
 var port =  process.env.PORT || 5000;
+// var msg = "Email was successfully sent!";
 
 // View engine setup
 app.set("view engine", "ejs");
+
+// Express Session setup
+app.use(session({
+  secret: 'Super duper Aiden big boy',
+  cookie: { maxAge: 60000 },
+  resave: false,
+  saveUninitialized: false
+}));
 
 //Static Folder
 app.use(express.static(__dirname + "/public"));
@@ -22,6 +33,7 @@ app.use(bodyParser.json());
 app.use(flash());
 
 app.get("/", function(req, res){
+  req.flash('msg', 'Email was successfully sent!');
   res.render('index.ejs');
 });
 
@@ -68,9 +80,9 @@ app.post("/send", function(req, res){
 
     });
 
-    res.flash("success", "Email was successfully sent!");
-    res.redirect('/', {
-      msg: req.flash("Email was successfully sent!")
+
+    res.redirect('/', function(req, res){
+      render('index');
     });
 
 
