@@ -27,7 +27,7 @@ app.get("/", function(req, res){
 });
 
 app.get("/blog", function(req, res){
-  //server hexo blog
+  res.render("blog.html");
 })
 
 app.post("/send", function(req, res){
