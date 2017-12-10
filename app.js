@@ -26,6 +26,10 @@ app.get("/", function(req, res){
   res.render('index.ejs');
 });
 
+app.get("/blog", function(req, res){
+  //server hexo blog
+})
+
 app.post("/send", function(req, res){
 
   var output = `
@@ -70,9 +74,7 @@ app.post("/send", function(req, res){
     });
 
 //something is wrong with the line below. it redirects to Cannot GET /[object%20Object]
-    res.redirect(res.status(200), '/', function(req, res){
-      render('index');
-    });
+    res.redirect(200, "/");
 
 
 });
