@@ -471,7 +471,7 @@ $(document).ready(function() {
    	/***********************
 	    - Contact form -
 	***********************/
-    
+
 
 	/****************************
 	    - Menu click scroll -
@@ -479,7 +479,7 @@ $(document).ready(function() {
 	$(document).on("scroll", onScroll);
 
 	$(".menu li a, .scroll-btn a[href^='#']").on("click", function(e) {
-		e.preventDefault();
+		// e.preventDefault();
 		$(document).off("scroll");
 
 		$("a").each(function () {
