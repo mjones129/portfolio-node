@@ -74,7 +74,7 @@ app.post("/send", function(req, res){
     });
 
 //something is wrong with the line below. it redirects to Cannot GET /[object%20Object]
-    res.redirect(200, "/");
+    res.redirect('/');
 
 
 });
