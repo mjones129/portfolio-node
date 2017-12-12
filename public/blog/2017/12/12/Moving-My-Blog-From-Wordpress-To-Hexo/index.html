@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Moving My Blog From Wordpress To Hexo | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="In the BeginningI started out playing with Wordpress a few years back, and didn’t really do a ton with it, mostly because I created a site with wordpress.com and not wordpress.org… rookie mistake on m">
+<meta name="keywords" content="Blogging,Backend,Developing,PHP,JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Moving My Blog From Wordpress To Hexo">
+<meta property="og:url" content="http://yoursite.com/2017/12/12/Moving-My-Blog-From-Wordpress-To-Hexo/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="In the BeginningI started out playing with Wordpress a few years back, and didn’t really do a ton with it, mostly because I created a site with wordpress.com and not wordpress.org… rookie mistake on m">
+<meta property="og:updated_time" content="2017-12-12T18:59:20.421Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Moving My Blog From Wordpress To Hexo">
+<meta name="twitter:description" content="In the BeginningI started out playing with Wordpress a few years back, and didn’t really do a ton with it, mostly because I created a site with wordpress.com and not wordpress.org… rookie mistake on m">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Moving-My-Blog-From-Wordpress-To-Hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/12/Moving-My-Blog-From-Wordpress-To-Hexo/" class="article-date">
+  <time datetime="2017-12-12T18:38:44.000Z" itemprop="datePublished">2017-12-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Moving My Blog From Wordpress To Hexo
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="In-the-Beginning"><a href="#In-the-Beginning" class="headerlink" title="In the Beginning"></a>In the Beginning</h3><p>I started out playing with Wordpress a few years back, and didn’t really do a ton with it, mostly because I created a site with <a href="https://wordpress.com/" target="_blank" rel="noopener">wordpress.com</a> and not <a href="https://wordpress.org/" target="_blank" rel="noopener">wordpress.org</a>… rookie mistake on my part. What’s the difference? Dot com is more of a basic, watered-down version of Wordpress with limited features, where dot org sort of unlocks the full customization you can expect from just writing custom code from scratch.</p>
+<h3 id="Why-Ditch-Wordpress"><a href="#Why-Ditch-Wordpress" class="headerlink" title="Why Ditch Wordpress?"></a>Why Ditch Wordpress?</h3><p>Well, a couple reasons. As a new developer, I really want to dig into the code part of my website and have a little more control over my website. Also, the first stack I ever learned used NodeJS and Express on the backend. Creating a blog that used pure JS on the backend seemed to make the most sense for me, and Hexo was a perfect fit. Wordpress is written with a ton of PHP, which I feel is going out of style (I very well could be wrong), and NodeJS is one of the more up-and-coming technologies out there. So I guess that makes me a hipster noobie dev.</p>
+<h3 id="Installing-Hexo"><a href="#Installing-Hexo" class="headerlink" title="Installing Hexo"></a>Installing Hexo</h3><p>The install was actually super easy. One line in the terminal to get the basics installed:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install hexo-cli -g --save</span><br></pre></td></tr></table></figure></p>
+<p>And one more to create an instant blog:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure></p>
+<p>Once you have that set up, you can either edit or delete the default “Hello World” post, and add images by dropping them into an asset folder for that post. Other things like videos, quotes, and code snippets can be added with some special markdown found <a href="https://hexo.io/docs/tag-plugins.html" target="_blank" rel="noopener">here</a>.</p>
+<p>Once you’ve got your first post written, you’re pretty much done! The only thing left is to use your markdown file and asset folder to actually generate an HTML blog post. To do that, it’s literally:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure></p>
+<p>That will create a new folder in your project directory called “Public”. That’s it! Just grab the contents of your public folder and toss it on your server. You can also set up your own deployment methods over <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">here</a>.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/12/12/Moving-My-Blog-From-Wordpress-To-Hexo/" data-id="cjb3z8nj00000tpsaz7yyx61o" class="article-share-link">Teilen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Backend/">Backend</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Blogging/">Blogging</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Developing/">Developing</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/12/12/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Backend/">Backend</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Blogging/">Blogging</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Developing/">Developing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/">PHP</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Backend/" style="font-size: 10px;">Backend</a> <a href="/tags/Blogging/" style="font-size: 10px;">Blogging</a> <a href="/tags/Developing/" style="font-size: 10px;">Developing</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/12/12/Moving-My-Blog-From-Wordpress-To-Hexo/">Moving My Blog From Wordpress To Hexo</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/12/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
