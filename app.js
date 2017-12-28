@@ -29,7 +29,7 @@ app.get("/", function(req, res){
 });
 
 app.get("/blog", function(req, res){
-  res.location("https://actualmattjones.tumblr.com/");
+  res.redirect("https://actualmattjones.tumblr.com/");
 })
 
 app.post("/send", function(req, res){
