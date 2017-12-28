@@ -1,10 +1,11 @@
+require('newrelic');
 const express = require('express');
 const app = express();
 const http = require('http');
 const https = require('https');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
-const newRelic = require('newrelic');
+
 
 var ejs = require('ejs');
 var port =  process.env.PORT || 5000;
