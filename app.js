@@ -46,19 +46,19 @@ app.post("/send", function(req, res){
   `;
   // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
-        host: 'smtp.stackmail.com',
-        port: 465,
-        secure: true, // true for 465, false for other ports
+        host: 'smtp-mail.outlook.com',
+        port: 587,
+        secure: false, // true for 465, false for other ports
         auth: {
-            user: 'form@matthewchristopherjones.com', // generated ethereal user
-            pass: 'Iv7812f46'  // generated ethereal password
+            user: 'outlook_A185B6018E1AF565@outlook.com', // generated ethereal user
+            pass: 'DarnTootin5603'  // generated ethereal password
         }
     });
 
     // setup email data with unicode symbols
     let mailOptions = {
         from: '"MCJ Form" <form@matthewchristopherjones.com>', // sender address
-        to: 'contact@matthewchristopherjones.com, 271films@gmail.com', // list of receivers
+        to: 'actualmattjones@protonmail.com, 271films@gmail.com', // list of receivers
         subject: 'New Contact Form Submission!', // Subject line
         text: 'New form submission', // plain text body
         html: output // html body
