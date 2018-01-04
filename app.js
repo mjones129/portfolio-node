@@ -34,8 +34,10 @@ app.get("/blog", function(req, res){
 });
 
 app.get("/downloads", function(req, res){
-  res.download('/downloads/MatthewChristopherJones.docx');
-  res.redirect('/');
+  var filePath = 'public/downloads/';
+  var fileName = 'MatthewChristopherJones.docx';
+  res.download(filePath, fileName);
+  
 });
 
 app.post("/send", function(req, res){
