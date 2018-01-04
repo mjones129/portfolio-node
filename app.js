@@ -18,6 +18,7 @@ app.set("view engine", "ejs");
 //Static Folder
 app.use(express.static(__dirname + "/public"));
 
+
 // Body Parser setup
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -34,6 +35,7 @@ app.get("/blog", function(req, res){
 
 app.get("/downloads", function(req, res){
   res.download('/downloads/MatthewChristopherJones.docx');
+  res.redirect('/');
 });
 
 app.post("/send", function(req, res){
