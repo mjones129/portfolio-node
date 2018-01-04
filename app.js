@@ -32,6 +32,10 @@ app.get("/blog", function(req, res){
   res.redirect(200, "https://actualmattjones.tumblr.com/");
 });
 
+app.get("/downloads", function(req, res){
+  res.download('/downloads/MatthewChristopherJones.docx');
+});
+
 app.post("/send", function(req, res){
 
   var output = `
