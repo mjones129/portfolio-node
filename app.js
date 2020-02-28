@@ -56,8 +56,8 @@ app.post("/send", function(req, res){
         port: 587,
         secure: false, // true for 465, false for other ports
         auth: {
-            user: 'outlook_A185B6018E1AF565@outlook.com', // generated ethereal user
-            pass: 'DarnTootin5603'  // generated ethereal password
+            user: 'removedFor@security.com', // generated ethereal user
+            pass: 'realPasswordGoesHere'  // generated ethereal password
         }
     });
 
